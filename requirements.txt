@@ -1,0 +1,9 @@
+openparse
+scikit-learn
+openai
+instructor==1.2.4
+pydantic
+plotly
+jupyter
+numpy
+
