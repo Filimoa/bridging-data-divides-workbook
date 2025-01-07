@@ -5,7 +5,6 @@ All these functions are redefined in the notebook but using a single star import
 import os
 from typing import Optional
 
-import instructor
 import numpy as np
 import plotly.graph_objects as go
 from IPython.display import Markdown
@@ -13,9 +12,9 @@ from openai import NOT_GIVEN, OpenAI
 import openparse
 
 
-client = instructor.patch(OpenAI(api_key=os.getenv("OPEN_AI_KEY")))
+client = OpenAI(api_key=os.getenv("OPEN_AI_KEY"))
 batch_size = 250
-embedding_model = "text-embedding-3-large"
+embedding_model = "text-embedding-3-small"
 
 prompt_template = """
 Using the document provided, answer the following question:
@@ -34,7 +33,7 @@ def cosine_similarity(a: list[float], b: list[float]) -> float:
 def get_embedding(text: str | list[str], dimensions: int = NOT_GIVEN) -> list[float]:
     """Get the embedding of the input text."""
     if dimensions:
-        assert dimensions <= 3072, "The maximum number of dimensions is 3072."
+        assert dimensions <= 256, "The maximum number of dimensions is 256."
 
     response = client.embeddings.create(
         input=text, model=embedding_model, dimensions=dimensions
@@ -198,7 +197,7 @@ def get_completion(prompt: str) -> Markdown:
     """
 
     completion = client.chat.completions.create(
-        model="gpt-4-turbo",
+        model="gpt-4o",
         messages=[
             {
                 "role": "user",
@@ -207,7 +206,8 @@ def get_completion(prompt: str) -> Markdown:
         ],
     )
 
-    cost_dollars = completion.usage.total_tokens / 100_000
+    cost_per_million_tokens = 4.00
+    cost_dollars = completion.usage.total_tokens / 1_000_000 * cost_per_million_tokens
 
     print(
         f"Completion used {completion.usage.total_tokens} tokens costing ${cost_dollars:.2f}"

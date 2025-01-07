@@ -1,7 +1,6 @@
-openparse
+openparse==0.5.8
+openai==1.59.3
 scikit-learn
-openai
-instructor==1.2.4
 pydantic
 plotly
 jupyter
