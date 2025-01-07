@@ -43,5 +43,5 @@ This notebook uses an OpenAI-based implementation for simplicity. You will need 
 
 For those who don't want to setup Python, you can use the hosted Colab version of the notebook. Note this does require a Google account and it may be blocked by your company's security policies.
 
-[Open In Colab](ADD-ME)
+[Open In Colab](https://colab.research.google.com/drive/15uvMEzytBbf65HBhjh82-mHDTK6GnYt5)
 
