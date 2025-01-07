@@ -35,13 +35,21 @@ jupyter notebook
 
 4. Open the notebook in your browser.
 
-## API Keys:
-
-This notebook uses an OpenAI-based implementation for simplicity. You will need an OpenAI API key that you can get from [here](https://platform.openai.com/api-keys). You can paste that key into the notebook in the cell that starts with `os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY"`. Make sure to replace `YOUR_API_KEY` with your actual API key and uncomment the line (remove the `#` at the beginning of the line).
-
 ## Hosted Colab Version:
 
 For those who don't want to setup Python, you can use the hosted Colab version of the notebook. Note this does require a Google account and it may be blocked by your company's security policies.
 
 [Open In Colab](https://colab.research.google.com/drive/15uvMEzytBbf65HBhjh82-mHDTK6GnYt5)
 
+
+## API Keys:
+
+This notebook uses an OpenAI-based implementation for simplicity. You will need an OpenAI API key that you can get from [here](https://platform.openai.com/api-keys). 
+
+You can paste that key into the notebook in the cell that starts with 
+
+```python
+os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY"
+```
+
+Make sure to replace `YOUR_API_KEY` with your actual API key and uncomment the line (remove the `#` at the beginning of the line).
