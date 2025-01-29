@@ -7,7 +7,7 @@ This repo accompanies the Bridging Data Divides CAS Essay, providing a hands-on 
 1. **Clone the Repository:**
 
 ```bash
-git clone https://github.com/openai/structured-outputs-samples.git
+git clone https://github.com/Filimoa/bridging-data-divides-workbook.git
 ```
       
 2. **Check you have Python installed:**
