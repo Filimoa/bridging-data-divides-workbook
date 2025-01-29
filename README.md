@@ -45,7 +45,7 @@ Then you can open the notebook in your browser.
 
 5. **API Keys:**
 
-This notebook uses an OpenAI-based implementation for simplicity. 
+This notebook uses an OpenAI-based approach for simplicity. Given the low token usage, it should only cost a few cents to run.
 
 - If you're new to the OpenAI API, [sign up for an account](https://platform.openai.com/signup).
 - Follow the [Quickstart](https://platform.openai.com/docs/quickstart) to retrieve your API key.
@@ -57,6 +57,12 @@ os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY"
 ```
 
 Make sure to replace `YOUR_API_KEY` with your actual API key and uncomment the line (remove the `#` at the beginning of the line).
+
+### ⚠️ **Work Computer SSL Issues**  
+Some corporate networks may block access to OpenAI’s API, leading to SSL verification errors. If you encounter this issue, consider:  
+- Running the notebook on a personal computer.  
+- Using the [hosted Colab version](https://colab.research.google.com/drive/15uvMEzytBbf65HBhjh82-mHDTK6GnYt5) (ensure your VPN is off).  
+- Checking with your IT team for potential workarounds, such as configuring SSL settings or using a company-approved proxy.
 
 ## Hosted Colab Version:
 
