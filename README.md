@@ -58,11 +58,10 @@ os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY"
 
 Make sure to replace `YOUR_API_KEY` with your actual API key and uncomment the line (remove the `#` at the beginning of the line).
 
-### ⚠️ **Work Computer SSL Issues**  
-Some corporate networks may block access to OpenAI’s API, leading to SSL verification errors. If you encounter this issue, consider:  
-- Running the notebook on a personal computer.  
-- Using the [hosted Colab version](https://colab.research.google.com/drive/15uvMEzytBbf65HBhjh82-mHDTK6GnYt5) (ensure your VPN is off).  
-- Checking with your IT team for potential workarounds, such as configuring SSL settings or using a company-approved proxy.
+> ⚠️ **Work Computer SSL Issues:** Some corporate networks may block access to OpenAI’s API, leading to SSL verification errors. If you encounter this issue, consider:  
+> - Running the notebook on a personal computer.  
+> - Using the [hosted Colab version](https://colab.research.google.com/drive/15uvMEzytBbf65HBhjh82-mHDTK6GnYt5) (ensure your VPN is off).  
+> - Checking with your IT team for potential workarounds, such as configuring SSL settings or using a company-approved proxy.
 
 ## Hosted Colab Version:
 
